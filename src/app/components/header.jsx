@@ -10,7 +10,7 @@ const myFont2 = localFont({ src: "../fonts/Eurostile.ttf" });
 import { useState } from "react";
 export default function Homeproduct() {
   const [img1, setImg1] = useState(true);
-  const [img2, usetImg2] = useState(false);
+  const [img2, setImg2] = useState(false);
 
   return (
     <section
@@ -51,7 +51,7 @@ export default function Homeproduct() {
             img1 ? "bg-purple-500" : "bg-purple-500/40"
           }`}
           onClick={() => {
-           setImg2(false);
+            setImg2(false);
             setImg1(true);
           }}
         >
