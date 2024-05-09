@@ -9,8 +9,8 @@ const myFont2 = localFont({ src: "../fonts/Eurostile.ttf" });
 // Import useState from 'react' library
 import { useState } from "react";
 export default function Homeproduct() {
-  const [img1, useImg1] = useState(true);
-  const [img2, useImg2] = useState(false);
+  const [img1, setImg1] = useState(true);
+  const [img2, usetImg2] = useState(false);
 
   return (
     <section
@@ -51,8 +51,8 @@ export default function Homeproduct() {
             img1 ? "bg-purple-500" : "bg-purple-500/40"
           }`}
           onClick={() => {
-            useImg2(false);
-            useImg1(true);
+           setImg2(false);
+            setImg1(true);
           }}
         >
           <Image src={image} width={70} alt="smartwatch" />
@@ -62,8 +62,8 @@ export default function Homeproduct() {
             img2 ? "bg-purple-500" : "bg-purple-500/40"
           }`}
           onClick={() => {
-            useImg1(false);
-            useImg2(true);
+            setImg1(false);
+            setImg2(true);
           }}
         >
           <Image src={image1} width={70} alt="smartwatch" />
